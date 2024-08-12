@@ -1,0 +1,13 @@
+-
+ name: pb on use of remove net-tools
+ hosts: all
+ tasks:
+  - name: code to remove the net-tools app
+    command:
+     cmd: yum remove net-tools -y
+  
+  - name: code to start http servive
+    command: 
+     cmd: service httpd start
+
+  
