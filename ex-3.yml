@@ -1,0 +1,8 @@
+-
+ name: pb on use case of installig net-tools application
+ hosts: client1
+ tasks: 
+  - name: code to install net-tools application
+    yum: 
+     name: net-tools
+    state: present
