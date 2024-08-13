@@ -1,0 +1,8 @@
+-
+ name: pb on use case of http
+ hosts: client1
+ tasks: 
+  - name: code to install http app
+    yum: 
+     name: http
+     state: latest
