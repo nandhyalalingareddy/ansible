@@ -1,0 +1,20 @@
+-
+ name: pb on use case of varibales declaration
+ hosts: all
+ vars:
+  a: 10
+  b: 20
+  c: 'abcdefg123'
+  d: "welcome"
+ tasks:
+  - name: code to create a file
+    file:
+     path: /opt/varibles.txt
+     state: touch
+
+  - name: code to declare the varibales in the playbook
+    lineinfile:
+     path: /opt/varibles.txt
+     state: present
+     line: 'the value of a is {{a}} and the value of b is {{b}} and the value of c is {{c}} and the value of d is {{d}}'
+
