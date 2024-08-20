@@ -1,0 +1,10 @@
+-
+ name: pb on use case of replacing content
+ hosts: all
+ tasks: 
+  - name: code to replace the content on the module
+    lineinfile:
+     path: /opt/india/rusiian.txt
+     regexp: 'Hello world'
+     line: 'India is great'
+     state: present
