@@ -1,0 +1,14 @@
+-
+ name: pb on use case of create a file and copy file
+ hosts: all
+ tasks:
+  - name: code to create a file
+    file:
+     path: /etc/notes.txt
+     state: touch
+
+  - name: code to write a messgae on file
+    copy:
+     content: 'Hello world'
+     dest: /etc/notes.txt
+
