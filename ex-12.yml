@@ -1,0 +1,13 @@
+-
+ name: pb o use case of using loop
+ hosts: all
+ tasks: 
+  - name: code to create a loop 
+    yum:
+     name: "{{item}}"
+     state: present
+    with_items: 
+     - git
+     - docker
+     - net-tools
+     - finger
