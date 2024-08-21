@@ -1,0 +1,14 @@
+-
+ name: pb on use case of loops new version
+ hosts: all
+ tasks: 
+  - name: code to absent of loops
+    yum:
+     name: "{{item}}"
+     state: absent
+    loop: 
+     - git
+     - net-tools
+     - docker
+     - finger
+
