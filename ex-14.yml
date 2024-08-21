@@ -1,0 +1,8 @@
+-
+ name: pb on use case of loops concept on future 
+ hosts: 
+ tasks:
+ - name: code to install apps by using loops concept
+   yum:
+    name: ['git', 'net-tools','docker', 'finger']
+    state: present
